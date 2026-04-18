@@ -1,0 +1,119 @@
+---
+title: Changelog
+description: Stay updated with the latest releases and improvements in ‡ KAKAROT ‡. This page tracks version history, new features, and bug fixes.
+---
+
+## Recent Releases
+
+Track the evolution of ‡ KAKAROT ‡ through our release history. You receive automatic updates when available. Review changes below to understand new capabilities and required actions.
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.2.0  | 2024-10-15 | Simulcast enhancements, UI improvements |
+| v1.1.0  | 2024-09-20 | Genre browsing, profile features |
+| v1.0.0  | 2024-08-10 | Initial release with core streaming |
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added simulcast support for real-time episode releases.
+- Introduced release calendar integration for upcoming anime schedules.
+
+## Improvements
+
+- Enhanced search performance by `>30%` for large libraries.
+- Optimized mobile UI for smoother navigation across genres.
+
+## Bug Fixes
+
+- Fixed playback interruptions on low-bandwidth connections.
+- Resolved profile sync issues across devices.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- New genre filters including Shonen, Seinen, and Slice of Life.
+- Added Crunchylists for personalized watchlists.
+
+## Bug Fixes
+
+- Corrected history tracking for binge-watching sessions.
+- Patched authentication errors during session timeouts.
+
+## Improvements
+
+- Faster category loading with lazy image rendering.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core streaming engine with categories and A–Z browsing.
+- User profiles, settings, and 7-day free trial signup.
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0/` to `/v1/`. Migrate by updating your client code:
+
+````javascript
+// Old
+fetch('https://api.example.com/v0/anime');
+
+// New
+fetch('https://api.example.com/v1/anime');
+````
+
+## Initial Setup
+
+- Basic authentication with `YOUR_API_KEY`.
+
+</Update>
+
+## Upcoming Roadmap
+
+Stay ahead with planned enhancements. Prioritize based on community feedback.
+
+<Columns cols={2}>
+  <Card title="Q4 2024" icon="zap" href="#">
+    Live chat during simulcasts and multi-language subtitles.
+  </Card>
+  <Card title="Q1 2025" icon="shield" href="#">
+    Advanced parental controls and offline downloads.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Subscribe to our news feed at `https://api.example.com/news` for instant notifications on new releases.
+</Callout>
+
+## Migration Guide
+
+For breaking changes, follow these steps:
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+    Export your Crunchylists and history.
+  </Step>
+  <Step title="Update Client" icon="download">
+    
+````bash
+npm update kakarot-sdk
+````
+
+  </Step>
+  <Step title="Test Endpoints" icon="play">
+    Verify API calls to `https://api.example.com/v1/`.
+  </Step>
+</Steps>
+
+<Expandable title="Detailed v1.0.0 Migration Notes" default-open="false">
+
+If you used beta endpoints, replace all instances of `{oldEndpoint}` with the new paths. Test thoroughly in staging.
+
+</Expandable>
